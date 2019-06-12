@@ -14,7 +14,7 @@ disk_free(const char *path)
 		return NULL;
 	}
 
-	return fmt_human(fs.f_frsize * fs.f_bavail, 1024);
+	return fmt_human(fs.f_frsize * fs.f_bavail, 1000);
 }
 
 const char *
