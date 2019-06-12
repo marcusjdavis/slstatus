@@ -66,7 +66,7 @@ static const struct arg args[] = {
 	{ cpu_perc, "CPU %s | ", NULL },
         { disk_free, "DISK FREE %sGB | ", "/" },
         { ram_perc, "RAM %s | ", NULL },
-        { vol_perc, "VOL %s | ", "hw:0" },
+        { run_command, "VOL %s%% | ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
         { battery_perc, "BAT %s ", "BAT0" },
         { battery_state, "%s | ", "BAT0" },
         { run_command, "%s | ", "spotify-now -i '%artist - %title'" },
